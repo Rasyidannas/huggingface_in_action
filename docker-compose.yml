@@ -1,0 +1,14 @@
+services:
+  jupyter:
+    build: .
+    container_name: jupyter-datascience
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./work:/home/rasyid/work
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - JUPYTER_TOKEN=mysecret
+      - NB_USER=rasyid
+      - CHOWN_HOME=yes
+    restart: unless-stopped
