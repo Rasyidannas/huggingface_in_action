@@ -12,3 +12,10 @@ services:
       - NB_USER=rasyid
       - CHOWN_HOME=yes
     restart: unless-stopped
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
