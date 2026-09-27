@@ -1,2 +1,5 @@
 # Environment variables - ignore all .env files
 .env
+
+# Model training outputs (too large for Git)
+work/HF_Projects/results/
